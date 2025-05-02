@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 
 # Set Java home
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 
 # Copy requirements file
