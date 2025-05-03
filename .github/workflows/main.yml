@@ -65,4 +65,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: arnabdalui14/cricket-analytics:latest
+        tags: kalpadas599/cricket-analytics:latest

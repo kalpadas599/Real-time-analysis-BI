@@ -20,7 +20,7 @@ transformers
 torch
 
 # Optional: Add version pins for reliability
-#protobuf==4.25.3
+protobuf
 # Download NLTK data
 # This will be run during container build
 # RUN python -c "import nltk; nltk.download('vader_lexicon')"
