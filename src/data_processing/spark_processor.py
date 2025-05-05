@@ -133,11 +133,12 @@ class SparkProcessor:
         logger.info("Starting Twitter data processing")
         
         try:
-            # Read from Kafka
+            # Read from Kafka (3line changed)
+            # Note: Replace 'host.docker.internal' with the actual Kafka broker address if not running in Docker
             twitter_df = self.spark \
                 .readStream \
                 .format("kafka") \
-                .option("kafka.bootstrap.servers", "localhost:9092") \
+                .option("kafka.bootstrap.servers", "kafka:9092") \
                 .option("subscribe", "twitter-data") \
                 .option("startingOffsets", "latest") \
                 .load() \
@@ -203,7 +204,7 @@ class SparkProcessor:
             viewership_df = self.spark \
                 .readStream \
                 .format("kafka") \
-                .option("kafka.bootstrap.servers", "localhost:9092") \
+                .option("kafka.bootstrap.servers", "kafka:9092") \
                 .option("subscribe", "viewership-data") \
                 .option("startingOffsets", "latest") \
                 .load() \
@@ -257,7 +258,7 @@ class SparkProcessor:
             query4 = viewership_df \
                 .writeStream \
                 .foreachBatch(self._write_viewership_to_firebase) \
-                .outputMode("complete") \
+                .outputMode("append") \
                 .start()
             
             # Keep the queries running
@@ -278,7 +279,7 @@ class SparkProcessor:
             ad_df = self.spark \
                 .readStream \
                 .format("kafka") \
-                .option("kafka.bootstrap.servers", "localhost:9092") \
+                .option("kafka.bootstrap.servers", "kafka:9092") \
                 .option("subscribe", "ad-data") \
                 .option("startingOffsets", "latest") \
                 .load() \
@@ -342,7 +343,7 @@ class SparkProcessor:
             query4 = processed_ad_df \
                 .writeStream \
                 .foreachBatch(self._write_ad_data_to_firebase) \
-                .outputMode("complete") \
+                .outputMode("append") \
                 .start()
             
             # Keep the queries running

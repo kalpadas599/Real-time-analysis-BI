@@ -5,23 +5,30 @@ import json
 import logging
 import threading
 import time
+import os
 
 logger = logging.getLogger(__name__)
 
-def setup_confluent_producer(bootstrap_servers, api_key, api_secret, twitter_client, google_ads_client):
+def setup_confluent_producer(twitter_client, google_ads_client):
     """
     Set up Confluent Kafka producer and start data ingestion threads
     
     Args:
-        bootstrap_servers (str): Confluent Kafka bootstrap servers
-        api_key (str): Confluent Kafka API key
-        api_secret (str): Confluent Kafka API secret
         twitter_client: Twitter API client
         google_ads_client: Google Ads API client
         
     Returns:
         Producer: Configured Confluent Kafka producer
     """
+    # Read Kafka configuration from environment variables
+    bootstrap_servers = os.getenv('KAFKA_BOOTSTRAP_SERVERS')
+    api_key = os.getenv('KAFKA_API_KEY')
+    api_secret = os.getenv('KAFKA_API_SECRET')
+
+    if not bootstrap_servers or not api_key or not api_secret:
+        logger.error("Kafka configuration environment variables are missing")
+        raise ValueError("Kafka configuration environment variables are missing")
+    
     # Create Confluent Kafka producer configuration
     conf = {
         'bootstrap.servers': bootstrap_servers,

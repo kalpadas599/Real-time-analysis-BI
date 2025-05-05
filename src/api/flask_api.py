@@ -61,7 +61,7 @@ def viewership_history():
             ORDER BY TIMESTAMP
         """
         
-        results = snowflake_client.execute_query(query)
+        results = snowflake_client.execute_query(query, (start_time,))
         
         # Format results
         data = []
@@ -338,7 +338,7 @@ def start_api_server(mongodb_client_instance, snowflake_client_instance, firebas
     
     # Start Flask in a separate thread
     def run_flask():
-        app.run(host='0.0.0.0', port=5000)
+        app.run(host='0.0.0.0', port=5001)
     
     flask_thread = threading.Thread(target=run_flask, daemon=True)
     flask_thread.start()

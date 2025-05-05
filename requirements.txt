@@ -18,6 +18,7 @@ thinc
 blis
 transformers
 torch
+huggingface_hub[hf_xet]
 
 # Optional: Add version pins for reliability
 protobuf
