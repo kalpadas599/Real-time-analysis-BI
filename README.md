@@ -70,8 +70,8 @@ Refer to [power_bi_setup.md](https://github.com/kalpadas599/Real-time-analysis-B
 
 ## Project Structure
 <img width="2931" height="2448" alt="Image" src="https://github.com/user-attachments/assets/baff9fe3-277b-40d2-94cd-2020493a7e4b" />
-```
 
+```
 Directory structure:
 └── kalpadas599-real-time-analysis-bi/
     ├── README.md
@@ -134,4 +134,5 @@ Directory structure:
 
 ### Contact to know more
 [LinkedIn](https://www.linkedin.com/in/kalpadas)
+
 
