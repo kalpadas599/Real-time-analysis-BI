@@ -85,33 +85,7 @@ Directory structure:
     ├── en_core_web_sm-3.8.0/
     │   └── en_core_web_sm/
     │       ├── __init__.py
-    │       ├── meta.json
-    │       └── en_core_web_sm-3.8.0/
-    │           ├── README.md
-    │           ├── accuracy.json
-    │           ├── config.cfg
-    │           ├── LICENSE
-    │           ├── LICENSES_SOURCES
-    │           ├── meta.json
-    │           ├── attribute_ruler/
-    │           │   └── patterns
-    │           ├── ner/
-    │           │   ├── cfg
-    │           │   └── moves
-    │           ├── parser/
-    │           │   ├── cfg
-    │           │   └── moves
-    │           ├── senter/
-    │           │   └── cfg
-    │           ├── tagger/
-    │           │   ├── cfg
-    │           │   └── model
-    │           ├── tok2vec/
-    │           │   └── cfg
-    │           └── vocab/
-    │               ├── key2row
-    │               ├── vectors
-    │               └── vectors.cfg
+    │       └── meta.json
     ├── src/
     │   ├── api/
     │   │   └── flask_api.py
@@ -134,5 +108,6 @@ Directory structure:
 
 ### Contact to know more
 [LinkedIn](https://www.linkedin.com/in/kalpadas)
+
 
 
