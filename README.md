@@ -66,7 +66,7 @@ python app.py
 This starts your ingestion pipeline and the app API layer.
 
 ### 5. Power BI Configuration
-Refer to [power_bi_setup.md](https://www.linkedin.com/in/kalpadas) which outlines how to connect your Power BI dashboard to the local API endpoints or data files that the application serves.
+Refer to [power_bi_setup.md](https://github.com/kalpadas599/Real-time-analysis-BI/blob/master/power_bi_setup.md) which outlines how to connect your Power BI dashboard to the local API endpoints or data files that the application serves.
 
 ## Project Structure
 <img width="2931" height="2448" alt="Image" src="https://github.com/user-attachments/assets/baff9fe3-277b-40d2-94cd-2020493a7e4b" />
@@ -134,3 +134,4 @@ Directory structure:
 
 ### Contact to know more
 [LinkedIn](https://www.linkedin.com/in/kalpadas)
+
