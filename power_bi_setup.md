@@ -97,7 +97,6 @@ This guide will help you set up Power BI to visualize the data from our Cricket 
 3. Enter email addresses of people you want to share with
 4. Set permissions
 5. Click "Share"
-\`\`\`
 
 ## Step 9: Running the Complete System
 
@@ -169,7 +168,3 @@ GOOGLE_ADS_CUSTOMER_ID=your_customer_id
 # Kafka
 KAFKA_BOOTSTRAP_SERVERS=localhost:9092
 \`\`\`
-
-## Installation
-
-1. Clone the repository:
