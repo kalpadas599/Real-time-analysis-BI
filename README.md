@@ -82,10 +82,6 @@ Directory structure:
     ├── power_bi_setup.md
     ├── requirements.txt
     ├── run_ingestion.py
-    ├── en_core_web_sm-3.8.0/
-    │   └── en_core_web_sm/
-    │       ├── __init__.py
-    │       └── meta.json
     ├── src/
     │   ├── api/
     │   │   └── flask_api.py
@@ -108,6 +104,7 @@ Directory structure:
 
 ### Contact to know more
 [LinkedIn](https://www.linkedin.com/in/kalpadas)
+
 
 
 
